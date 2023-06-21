@@ -26,6 +26,9 @@ public class TodoService {
         return todos.stream().filter(predicate).toList();
     }
 
+    /*
+    This method is used to insert new todo list
+    */
     public void addTodo(String username, String description, LocalDate targetDate, boolean done){
         Todo todo = new Todo(++todosCount, username, description, targetDate, done);
         todos.add(todo);
